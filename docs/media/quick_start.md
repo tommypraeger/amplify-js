@@ -12,6 +12,8 @@ Use the drop-down menu at the top right of this page to choose the framework for
 
 ## Step 0. Set up your Development Environment 
 
+<button id="step0-collapse" class="btn collapse-btn">Expand</button>
+<div id="step0">
 Install the Amplify CLI. If you have already installed the CLI, skip ahead to [Step 1. Create a New App](#step-1-create-a-new-app).
 
 - <a href="https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start" target="_blank">Sign up for an AWS Account</a>
@@ -29,9 +31,12 @@ $ amplify configure
 
 Note: These commands will install the CLI globally. If you're using Windows, the CLI currently supports <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Windows Subsystem for Linux</a>.
 {: .callout .callout--action}
+</div>
 
 ## Step 1. Create a New App
 
+<button id="step1-collapse" class="btn collapse-btn">Expand</button>
+<div id="step1">
 <div class="nav-tab create" data-group='create'>
 <ul class="tabs">
     <li class="tab-link purejs current" data-tab="purejs">JavaScript</li>
@@ -223,9 +228,12 @@ $ cd myAmplifyProject
 ```
 </div>
 </div>
+</div>
 
 ## Step 2. Install the Amplify Library 
 
+<button id="step2-collapse" class="btn collapse-btn">Expand</button>
+<div id="step2">
 In a terminal window, change to the root directory of your app and run the following command:
 
 <div class="nav-tab install" data-group='install'>
@@ -315,9 +323,12 @@ See the [Ionic Guide](https://aws-amplify.github.io/amplify-js/media/ionic_guide
 
 </div>
 </div>
+</div>
 
 ## Step 3. Set up the App Backend
 
+<button id="step3-collapse" class="btn collapse-btn">Expand</button>
+<div id="step3">
 Create new AWS backend resources and pull the AWS services configuration into the app. In a terminal window, change to the root directory of your app and run the following command (for this app, accepting all defaults is OK):
 
 ```bash
@@ -353,9 +364,12 @@ $ amplify push
 ```
 
 > A configuration file (`aws-exports.js`) will be added to the source directory.
+</div>
 
-## Step 4. Integrate the AWS Backend Resources to the App with Amplify
+## Step 4. Integrate AWS Backend Resources to the App with Amplify
 
+<button id="step4-collapse" class="btn collapse-btn">Expand</button>
+<div id="step4">
 <div class="nav-tab install" data-group='install'>
 <ul class="tabs">
     <li class="tab-link angular" data-tab="angular">Angular</li>
@@ -731,9 +745,13 @@ Then, replace your `src/app/app.component.html` code with the following:
 </div>
 ```
 </div>
+</div>
+</div>
 
 ## Step 5. Host your App on Amazon S3
 
+<button id="step5-collapse" class="btn collapse-btn">Expand</button>
+<div id="step5">
 Enable static web hosting for the app. In a terminal window, change to the root directory of your app and run the following command:
 
 ```bash
@@ -759,7 +777,6 @@ $ amplify status
 What next? Here are some things to add to your app:
  - Add [Authentication]({%if jekyll.environment == 'production'%}{{site.amplify.docs_baseurl}}{%endif%}/media/authentication_guide)
  - Add [Data]({%if jekyll.environment == 'production'%}{{site.amplify.docs_baseurl}}{%endif%}/media/api_guide) with serverless GraphQL
-
 
 #### Existing AWS Resources
 
@@ -817,3 +834,4 @@ Auth.currentCredentials()
     // route53.changeResourceRecordSets();
   })
 ```
+</div>

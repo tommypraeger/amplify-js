@@ -353,8 +353,31 @@
 	// When the last message is received. Typicaly the announcement time
 	showNotificationBar( new Date('August 1, 2018 11:42:00') );
 
-	// Hide magnifying glass in search bar
+	// Collapse steps
+    $.fn.toggleText = function(t1, t2){
+        if (this.text() == t1) this.text(t2);
+        else                   this.text(t1);
+        return this;
+    };
+    for (let step = 0; step <= 5; step++) {
+	 	$('#step'+step).hide("normal");
+        $('#step'+step+'-collapse').click(function() {
+            $('#step'+step).toggle("normal");
+            $(this).toggleText('Collapse', 'Expand');
+        })
+        if ($.urlParam('step').length) {
+            startStep = $.urlParam('step');
+            if (startStep == step) {
+                $('#step'+step).show()
+            }
+            else {
+                $('#step'+step).hide()
+                $('#step'+step+'-collapse').text("Expand");
+            }
+        }
+    }
 
+	// Hide magnifying glass in search bar
 	var hideSearchIcon = function() {
 		let search_box = document.getElementById("search-input")
 		search_box.onclick = function() {
