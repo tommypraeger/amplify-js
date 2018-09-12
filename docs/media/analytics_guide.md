@@ -18,7 +18,7 @@ $ amplify add analytics
 
 The CLI will prompt configuration options for the Analytics category such as Amazon Pinpoint resource name and analytics event settings.
 
-{The Analytics category utilizes the Authentication category behind the scenes to authorize your app to send analytics events.}
+The Analytics category utilizes the Authentication category behind the scenes to authorize your app to send analytics events.
 {: .callout .callout--info}
 
 The `add` command automatically creates a backend configuration locally. To update your backend run:
