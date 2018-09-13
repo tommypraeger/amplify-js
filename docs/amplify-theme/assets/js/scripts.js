@@ -359,7 +359,7 @@
         else                   this.text(t1);
         return this;
     };
-    for (let step = 0; step <= 5; step++) {
+    for (let step = 1; step <= 4; step++) {
 	 	$('#step'+step).hide("normal");
         $('#step'+step+'-collapse').click(function() {
             $('#step'+step).toggle("normal");
